@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cake.TasksReuse", "Cake.TasksReuse\Cake.TasksReuse.csproj", "{43C9D892-EBBB-484F-B7F7-80AE8B280328}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cake.TasksReuse.Tests", "Cake.TasksReuse.Tests\Cake.TasksReuse.Tests.csproj", "{DC7E10FE-4138-461C-B0BE-3640C4324902}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43C9D892-EBBB-484F-B7F7-80AE8B280328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43C9D892-EBBB-484F-B7F7-80AE8B280328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43C9D892-EBBB-484F-B7F7-80AE8B280328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43C9D892-EBBB-484F-B7F7-80AE8B280328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC7E10FE-4138-461C-B0BE-3640C4324902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC7E10FE-4138-461C-B0BE-3640C4324902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC7E10FE-4138-461C-B0BE-3640C4324902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC7E10FE-4138-461C-B0BE-3640C4324902}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
