@@ -25,6 +25,8 @@ namespace Cake.TasksReuse.Tests
             var buildCtx = Cake.Context.ParseContext("Resources/config.json");
             Assert.Equal("TasksReuseBuild", buildCtx.BuildName);
             Assert.Equal("build-tasks", buildCtx.BuildArtifactsDir);
+            Assert.Equal("Resources/TasksReuseBuild.nuspec", buildCtx.PackageSpecPath);
+            Assert.Equal("1.2.3", buildCtx.PackageVersion);
         }
     }
 }

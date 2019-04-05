@@ -1,4 +1,6 @@
 ﻿{
   "BuildName" : "TasksReuseBuild",
-  "BuildArtifactsDir" : "build-tasks"
+  "BuildArtifactsDir" : "build-tasks",
+  "PackageSpecPath": "Resources/TasksReuseBuild.nuspec",
+  "PackageVersion" : "1.2.3"
 }
