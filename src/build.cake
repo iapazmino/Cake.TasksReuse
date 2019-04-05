@@ -5,14 +5,14 @@ var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Debug");
 var packageVersion = Argument("packageVersion", "1.0.0");
 
-var dirBuildOuput = "build";
+var dirBuildOutput = "build";
 
 Task("Default")
     .IsDependentOn("Clean")
     .IsDependentOn("Restore-Build-And-Pack")
     .IsDependentOn("Test");
 
-Task("Default")
+Task("CI")
     .IsDependentOn("Clean")
     .IsDependentOn("Restore-Build-And-Pack")
     .IsDependentOn("Test-With-Coverage");
@@ -54,13 +54,14 @@ Task("Test")
     );
 
 var openCoverSettings = new OpenCoverSettings().WithFilter("+[Cake.TasksReuse]*").WithFilter("-[Cake.TasksReuse.Tests]*");
-Task("Test")
+var openCoverReportPath = new FilePath($"{dirBuildOutput}/Cake.TasksReuse.Tests.Coverage.dll.xml");
+Task("Test-With-Coverage")
     .Does(() =>
         {
             EnsureDirectoryExists(dirBuildOutput);
             OpenCover(
-                tool => { tool.XUnit2(testsDllPath, xunitSettings) },
-                new FilePath($"{dirBuildOutput}/Cake.TasksReuse.Tests.Coverage.dll.xml"),
+                tool => { tool.XUnit2(testsDllPath, xunitSettings); },
+                openCoverReportPath,
                 openCoverSettings
             );
         }
